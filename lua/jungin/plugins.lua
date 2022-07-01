@@ -49,6 +49,7 @@ return packer.startup(function(use)
     require("toggleterm").setup()
   end }
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "p00f/nvim-ts-rainbow"
 
   use { "ellisonleao/gruvbox.nvim" }
 
