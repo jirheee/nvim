@@ -9,5 +9,6 @@ require "jungin.treesitter"
 require "jungin.autopairs"
 require "jungin.comment"
 require "jungin.gitsigns"
+require "jungin.toggleterm"
 
 
