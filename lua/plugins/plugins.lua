@@ -1,4 +1,28 @@
 return {
+  { "vimwiki/vimwiki" },
+
+  {
+    "vimwiki/vimwiki",
+    event = "BufEnter *.md",
+    keys = { "<leader>ww" },
+    init = function()
+      vim.g.vimwiki_folding = ""
+      vim.g.vimwiki_conceallevel = 0
+      vim.g.vimwiki_list = {
+        {
+          path = "~/development/wiki",
+          ext = ".md",
+          syntax = "markdown",
+        },
+      }
+      vim.g.vimwiki_ext2syntax = {
+        [".md"] = "markdown",
+        [".markdown"] = "markdown",
+        [".mdown"] = "markdown",
+      }
+    end,
+  },
+
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
