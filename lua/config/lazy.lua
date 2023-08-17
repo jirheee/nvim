@@ -15,6 +15,7 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "plugins" },
   },
   defaults = {
