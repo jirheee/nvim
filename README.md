@@ -1,9 +1,6 @@
 # Jung In's NVIM config
 ## TODO 
-* Setup vimwiki
-  * Add auto-update
-  * TOC
-  * add vimwiki table keymap
+- Migrate out of vimwiki or fix syntax highlight
 
 
 # Reference
