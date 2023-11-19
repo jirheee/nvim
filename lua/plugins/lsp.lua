@@ -11,6 +11,9 @@ return {
               rustc = {
                 source = "discover",
               },
+              diagnostics = {
+                disabled = { "unresolved-proc-macro" },
+              },
             },
           },
         },
