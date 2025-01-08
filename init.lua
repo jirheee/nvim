@@ -166,8 +166,15 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps
+-- Diagnostic
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>i', vim.diagnostic.open_float, { desc = 'Open diagnostic float' })
+
+vim.diagnostic.config {
+  virtual_text = false,
+  update_in_insert = false,
+  severity_sort = true,
+}
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -919,6 +926,11 @@ require('lazy').setup({
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
+  },
+
+  {
+    'TomDeneire/lsp-in-gutter.nvim',
+    config = true,
   },
 
   -- Highlight todo, notes, etc in comments
