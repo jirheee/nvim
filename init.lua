@@ -171,7 +171,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<leader>i', vim.diagnostic.open_float, { desc = 'Open diagnostic float' })
 
 vim.diagnostic.config {
-  virtual_text = false,
   update_in_insert = false,
   severity_sort = true,
 }
@@ -926,11 +925,6 @@ require('lazy').setup({
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
-  },
-
-  {
-    'TomDeneire/lsp-in-gutter.nvim',
-    config = true,
   },
 
   -- Highlight todo, notes, etc in comments
